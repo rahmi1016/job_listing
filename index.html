@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="dist/style.css" />
+    <title>Frontend Mentor | Job Listings</title>
+  </head>
+  <body>
+    <div class="header"></div>
+    <div id="filter" class="filter hidden">
+      <div class="filter_container">
+        <div class="filter_inner_container hidden" id="searchRole">
+          <div class="filter_text" id="role"></div>
+          <div class="close" onclick="handleClearRole()">
+            <img src="./images/icon-remove.svg" alt="close icon" />
+          </div>
+        </div>
+
+        <div class="filter_inner_container hidden" id="searchLevel">
+          <div class="filter_text" id="level"></div>
+          <div class="close" onclick="handleClearLevel()">
+            <img src="./images/icon-remove.svg" alt="close icon" />
+          </div>
+        </div>
+        <div class="filter_inner_container hidden" id="searchLangOne">
+          <div class="filter_text" id="langOne"></div>
+          <div class="close" onclick="handleClearLangOne()">
+            <img src="./images/icon-remove.svg" alt="close icon" />
+          </div>
+        </div>
+        <div class="filter_inner_container hidden" id="searchLangTwo">
+          <div class="filter_text" id="langTwo"></div>
+          <div class="close" onclick="handleClearLangTwo()">
+            <img src="./images/icon-remove.svg" alt="close icon" />
+          </div>
+        </div>
+        <div class="filter_inner_container hidden" id="searchLangThree">
+          <div class="filter_text" id="langThree"></div>
+          <div class="close" onclick="handleClearLangThree()">
+            <img src="./images/icon-remove.svg" alt="close icon" />
+          </div>
+        </div>
+
+        <div class="filter_inner_container hidden" id="searchToolOne">
+          <div class="filter_text" id="toolOne"></div>
+          <div class="close" onclick="handleClearToolOne()">
+            <img src="./images/icon-remove.svg" alt="close icon" />
+          </div>
+        </div>
+        <div class="filter_inner_container hidden" id="searchToolTwo">
+          <div class="filter_text" id="toolTwo"></div>
+          <div class="close" onclick="handleClearToolTwo()">
+            <img src="./images/icon-remove.svg" alt="close icon" />
+          </div>
+        </div>
+      </div>
+      <div class="clear" onclick="handleClearAll()">Clear</div>
+    </div>
+
+    <div
+      id="c1"
+      class="container left_border"
+      data-role="frontend"
+      data-level="senior"
+      data-lang-one="html"
+      data-lang-two="css"
+      data-lang-three="javascript"
+    >
+      <div class="info">
+        <img src="/images/photosnap.svg" alt="photosnap" class="logo" />
+        <div class="sub_container">
+          <div class="inner_container">
+            <div class="company">Photosnap</div>
+            <div class="new">New!</div>
+            <div class="featured">featured</div>
+          </div>
+          <div class="position">Senior Frontend Developer</div>
+          <div class="second_info">
+            <div>1d ago</div>
+            <div>&#x2022;</div>
+            <div>Full Time</div>
+            <div>&#x2022;</div>
+            <div>USA only</div>
+          </div>
+        </div>
+      </div>
+      <hr class="hline" />
+      <div>
+        <div class="tags">
+          <div class="tag_text role" onclick="handleSearchRole(event)">Frontend</div>
+          <div class="tag_text level" onclick="handleSearchLevel(event)">Senior</div>
+          <div class="tags">
+            <div class="tag_text lang" onclick="handleSearchLangOne(event)">HTML</div>
+            <div class="tag_text lang" onclick="handleSearchLangTwo(event)">CSS</div>
+            <div class="tag_text lang" onclick="handleSearchLangThree(event)">JavaScript</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container left_border" id="c2" data-role="fullstack" data-level="midweight" data-lang-one="python" data-tool-one="react">
+      <div class="info">
+        <img src="/images/manage.svg" alt="manage" class="logo" />
+        <div class="sub_container">
+          <div class="inner_container">
+            <div class="company">Manage</div>
+            <div class="new">New!</div>
+            <div class="featured">featured</div>
+          </div>
+          <div class="position">Fullstack Developer</div>
+          <div class="second_info">
+            <div>1d ago</div>
+            <div>&#x2022;</div>
+            <div>Part Time</div>
+            <div>&#x2022;</div>
+            <div>Remote</div>
+          </div>
+        </div>
+      </div>
+      <hr class="hline" />
+      <div>
+        <div class="tags">
+          <div class="tag_text role" onclick="handleSearchRole(event)">Fullstack</div>
+          <div class="tag_text level" onclick="handleSearchLevel(event)">Midweight</div>
+          <div class="tag_text lang" onclick="handleSearchLangOne(event)">Python</div>
+          <div class="tag_text tool" onclick="handleSearchToolOne(event)">React</div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container left_border"
+      id="c3"
+      data-role="frontend"
+      data-level="junior"
+      data-lang-one="javascript"
+      data-tool-one="react"
+      data-tool-two="sass"
+    >
+      <div class="info">
+        <img src="/images/account.svg" alt="account" class="logo" data-level="junior" data-language="javascript" data-tool="react sass" />
+        <div class="sub_container">
+          <div class="inner_container">
+            <div class="company">Account</div>
+            <div class="new">New!</div>
+          </div>
+          <div class="position">Junior Frontend Developer</div>
+          <div class="second_info">
+            <div>2d ago</div>
+            <div>&#x2022;</div>
+            <div>Part Time</div>
+            <div>&#x2022;</div>
+            <div>USA only</div>
+          </div>
+        </div>
+      </div>
+      <hr class="hline" />
+      <div>
+        <div class="tags">
+          <div class="tag_text role" onclick="handleSearchRole(event)">Frontend</div>
+          <div class="tag_text level" onclick="handleSearchLevel(event)">Junior</div>
+          <div class="tag_text lang" onclick="handleSearchLangOne(event)">JavaScript</div>
+          <div class="tags">
+            <div class="tag_text tool" onclick="handleSearchToolOne(event)">React</div>
+            <div class="tag_text tool" onclick="handleSearchToolTwo(event)">Sass</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="c4" data-role="frontend" data-level="junior" data-lang-one="css" data-lang-two="javascript">
+      <div class="info">
+        <img src="/images/myhome.svg" alt="myhome" class="logo" />
+        <div class="sub_container">
+          <div class="inner_container">
+            <div class="company">MyHome</div>
+          </div>
+          <div class="position">Junior Frontend Developer</div>
+          <div class="second_info">
+            <div>5d ago</div>
+            <div>&#x2022;</div>
+            <div>Contract</div>
+            <div>&#x2022;</div>
+            <div>USA only</div>
+          </div>
+        </div>
+      </div>
+      <hr class="hline" />
+      <div>
+        <div class="tags">
+          <div class="tag_text role" onclick="handleSearchRole(event)">Frontend</div>
+          <div class="tag_text level" onclick="handleSearchLevel(event)">Junior</div>
+          <div class="tags">
+            <div class="tag_text lang" onclick="handleSearchLangOne(event)">CSS</div>
+            <div class="tag_text lang" onclick="handleSearchLangTwo(event)">JavaScript</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="c5" data-role="fullstack" data-level="midweight" data-lang-one="javascript" data-lang-two="ruby" data-tool-one="sass">
+      <div class="info">
+        <img src="/images/loop-studios.svg" alt="loop-studios" class="logo" />
+        <div class="sub_container">
+          <div class="inner_container">
+            <div class="company">Loop Studios</div>
+          </div>
+          <div class="position">Software Engineer</div>
+          <div class="second_info">
+            <div>1w ago</div>
+            <div>&#x2022;</div>
+            <div>Full Time</div>
+            <div>&#x2022;</div>
+            <div>Worldwide</div>
+          </div>
+        </div>
+      </div>
+      <hr class="hline" />
+      <div>
+        <div class="tags">
+          <div class="tag_text role" onclick="handleSearchRole(event)">Fullstack</div>
+          <div class="tag_text level" onclick="handleSearchLevel(event)">Midweight</div>
+          <div class="tags">
+            <div class="tag_text lang" onclick="handleSearchLangOne(event)">JavaScript</div>
+            <div class="tag_text lang" onclick="handleSearchLangTwo(event)">Ruby</div>
+          </div>
+          <div class="tag_text tool" onclick="handleSearchToolOne(event)">Sass</div>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="c6" data-role="backend" data-level="junior" data-lang-one="ruby" data-tool-one="ror">
+      <div class="info">
+        <img src="/images/faceit.svg" alt="faceit" class="logo" />
+        <div class="sub_container">
+          <div class="inner_container">
+            <div class="company">FaceIt</div>
+          </div>
+          <div class="position">Junior Backend Developer</div>
+          <div class="second_info">
+            <div>2w ago</div>
+            <div>&#x2022;</div>
+            <div>Full Time</div>
+            <div>&#x2022;</div>
+            <div>UK only</div>
+          </div>
+        </div>
+      </div>
+      <hr class="hline" />
+      <div>
+        <div class="tags">
+          <div class="tag_text role" onclick="handleSearchRole(event)">Backend</div>
+          <div class="tag_text level" onclick="handleSearchLevel(event)">Junior</div>
+          <div class="tag_text lang" onclick="handleSearchLangOne(event)">Ruby</div>
+          <div class="tag_text tool" onclick="handleSearchToolOne(event)">RoR</div>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="c7" data-role="frontend" data-level="junior" data-lang-one="html" data-lang-two="javascript" data-tool-one="sass">
+      <div class="info">
+        <img src="/images/shortly.svg" alt="shortly" class="logo" />
+        <div class="sub_container">
+          <div class="inner_container">
+            <div class="company">Shortly</div>
+          </div>
+          <div class="position">Junior Developer</div>
+          <div class="second_info">
+            <div>2w ago</div>
+            <div>&#x2022;</div>
+            <div>Full Time</div>
+            <div>&#x2022;</div>
+            <div>Worldwide</div>
+          </div>
+        </div>
+      </div>
+      <hr class="hline" />
+      <div>
+        <div class="tags">
+          <div class="tag_text role" onclick="handleSearchRole(event)">Frontend</div>
+          <div class="tag_text level" onclick="handleSearchLevel(event)">Junior</div>
+          <div class="tags">
+            <div class="tag_text lang" onclick="handleSearchLangOne(event)">HTML</div>
+            <div class="tag_text lang" onclick="handleSearchLangTwo(event)">JavaScript</div>
+          </div>
+          <div class="tag_text" onclick="handleSearchToolOne(event)">Sass</div>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="c8" data-role="frontend" data-level="junior" data-lang-one="javascript" data-tool-one="vue" data-tool-two="sass">
+      <div class="info">
+        <img src="/images/insure.svg" alt="insure" class="logo" />
+        <div class="sub_container">
+          <div class="inner_container">
+            <div class="company">Insure</div>
+          </div>
+          <div class="position">Junior Frontend Developer</div>
+          <div class="second_info">
+            <div>2w ago</div>
+            <div>&#x2022;</div>
+            <div>Full Time</div>
+            <div>&#x2022;</div>
+            <div>USA only</div>
+          </div>
+        </div>
+      </div>
+      <hr class="hline" />
+      <div>
+        <div class="tags">
+          <div class="tag_text role" onclick="handleSearchRole(event)">Frontend</div>
+          <div class="tag_text level" onclick="handleSearchLevel(event)">Junior</div>
+          <div class="tag_text lang" onclick="handleSearchLangOne(event)">JavaScript</div>
+          <div class="tags">
+            <div class="tag_text tool" onclick="handleSearchToolOne(event)">Vue</div>
+            <div class="tag_text tool" onclick="handleSearchToolTwo(event)">Sass</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container"
+      id="c9"
+      data-role="fullstack"
+      data-level="midweight"
+      data-lang-one="javascript"
+      data-lang-two="python"
+      data-tool-one="django"
+    >
+      <div class="info">
+        <img src="/images/eyecam-co.svg" alt="eyecam-co" class="logo" />
+        <div class="sub_container">
+          <div class="inner_container">
+            <div class="company">Eyecam Co.</div>
+          </div>
+          <div class="position">Full Stack Engineer</div>
+          <div class="second_info">
+            <div>3w ago</div>
+            <div>&#x2022;</div>
+            <div>Full Time</div>
+            <div>&#x2022;</div>
+            <div>Worldwide</div>
+          </div>
+        </div>
+      </div>
+      <hr class="hline" />
+      <div>
+        <div class="tags">
+          <div class="tag_text role" onclick="handleSearchRole(event)">Fullstack</div>
+          <div class="tag_text level" onclick="handleSearchLevel(event)">Midweight</div>
+          <div class="tags">
+            <div class="tag_text lang" onclick="handleSearchLangOne(event)">JavaScript</div>
+            <div class="tag_text lang" onclick="handleSearchLangTwo(event)">Python</div>
+          </div>
+          <div class="tag_text tool" onclick="handleSearchToolOne(event)">Django</div>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="c10" data-role="frontend" data-level="junior" data-lang-one="javascript" data-tool-one="react" data-tool-two="sass">
+      <div class="info">
+        <img src="/images/the-air-filter-company.svg" alt="the-air-filter-company" class="logo" />
+        <div class="sub_container">
+          <div class="inner_container">
+            <div class="company">The Air Filter Company</div>
+          </div>
+          <div class="position">Front-end Dev</div>
+          <div class="second_info">
+            <div>1m ago</div>
+            <div>&#x2022;</div>
+            <div>Part Time</div>
+            <div>&#x2022;</div>
+            <div>Worldwide</div>
+          </div>
+        </div>
+      </div>
+      <hr class="hline" />
+      <div>
+        <div class="tags">
+          <div class="tag_text role" onclick="handleSearchRole(event)">Frontend</div>
+          <div class="tag_text level" onclick="handleSearchLevel(event)">Junior</div>
+          <div class="tag_text lang" onclick="handleSearchLangOne(event)">JavaScript</div>
+          <div class="tags">
+            <div class="tag_text tool" onclick="handleSearchToolOne(event)">React</div>
+            <div class="tag_text tool" onclick="handleSearchToolTwo(event)">Sass</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

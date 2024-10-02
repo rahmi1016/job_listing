@@ -1,0 +1,84 @@
+@use "../utils" as u;
+
+body {
+  font-family: u.$Spartan;
+}
+
+.filter_text {
+  font-size: u.rem(15);
+  font-family: u.$Spartan;
+  background-color: var(--light-grayish-cyan-ft-tb);
+  color: var(--desaturated-dark-cyan);
+  padding: 6px;
+  font-weight: 500;
+  align-items: center;
+  border-radius: 4px 0 0 4px;
+}
+
+.company {
+  font-family: u.$Spartan;
+  color: var(--desaturated-dark-cyan);
+  font-weight: 500;
+  font-size: u.rem(15);
+}
+
+.new {
+  font-size: u.rem(13);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: white;
+  background-color: var(--desaturated-dark-cyan);
+  border-radius: u.rem(10);
+  padding: 6px 6px 4px;
+}
+
+.featured {
+  font-size: u.rem(13);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: white;
+  background-color: var(--very-dark-grayish-cyan);
+  border-radius: u.rem(10);
+  padding: 6px 6px 4px;
+}
+
+.position {
+  font-weight: 700;
+  font-family: u.$Spartan;
+  font-size: u.rem(16);
+  color: black;
+  &:hover {
+    cursor: pointer;
+    color: var(--desaturated-dark-cyan);
+  }
+}
+.attribution {
+  display: none;
+  font-size: 11px;
+  text-align: center;
+  &a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+.second_info {
+  display: flex;
+  column-gap: u.rem(6);
+  color: var(--dark-grayish-cyan);
+  font-family: u.$Spartan;
+  font-weight: 500;
+  font-size: u.rem(14);
+}
+
+.tag_text {
+  background-color: var(--light-grayish-cyan-bg);
+  color: var(--desaturated-dark-cyan);
+  font-family: u.$Spartan;
+  padding: 8px 8px 6px;
+  border-radius: u.rem(5);
+  cursor: pointer;
+  &:hover {
+    background-color: var(--desaturated-dark-cyan);
+    color: white;
+  }
+}

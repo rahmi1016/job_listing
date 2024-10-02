@@ -1,0 +1,25 @@
+@use "../utils" as u;
+
+.logo {
+  position: static;
+  object-fit: scale-down;
+  margin-right: u.rem(20);
+  width: u.rem(90);
+  height: u.rem(90);
+  @include u.breakpoint-down(medium) {
+    position: absolute;
+    width: u.rem(75);
+    height: u.rem(75);
+    top: u.rem(-40);
+  }
+}
+
+.hline {
+  margin-top: u.rem(20);
+  margin-bottom: u.rem(10);
+  color: var(--dark-grayish-cyan);
+  visibility: hidden;
+  @include u.breakpoint-down(medium) {
+    visibility: visible;
+  }
+}
