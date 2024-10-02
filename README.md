@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [solution url]([https://your-solution-url.com](https://github.com/rahmi1016/job_listing))
-- Live Site URL: [live site]([https://your-live-site-url.com](https://rahmi1016.github.io/job_listing/))
+- Solution URL: [solution url](https://your-solution-url.com](https://github.com/rahmi1016/job_listing)
+- Live Site URL: [live site](https://your-live-site-url.com](https://rahmi1016.github.io/job_listing/)
 
 ## My process
 
